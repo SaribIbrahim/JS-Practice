@@ -7,20 +7,49 @@
 </head>
 <body>
     
-
+    <ul id="menu">
+        <li ><a href="">Test1</a></li>
+        <li><a href="">Test2</a></li>
+    </ul>
+    <button id="btn">Click</button>
 
 
 
     <script>
 
-        let product={
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click", buttonClick);
+
+        function buttonClick(){
+            document.getElementById("menu").style.backgroundColor="red";
+            document.getElementById("menu").style.color="green";
+        }
+
+
+
+
+
+    let product={
             title:"Bag",
             price:100,
+            discount:50,
             description:"This is a bag",
             image:"",
             category:"Bag",
-            rating:4.5
+            rating:4.5,
+            size:["S","M","L","XL"],
+            cacluatePrice:function(){
+                return this.price-this.discount;
+            },
+
+            showSize:function(){
+                return this.size;
+            }
         }
+
+       console.log( product.cacluatePrice());
+       console.log( product.showSize());
+       
 
         let products=[
         {
@@ -46,10 +75,10 @@
 
         ]
         let p=JSON.stringify(products);
-        console.log(p);
+       
 
         let p2=JSON.parse(p);
-        console.log(p2);
+       
         
 
 
