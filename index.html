@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+        let product={
+            title:"Bag",
+            price:100,
+            description:"This is a bag",
+            image:"",
+            category:"Bag",
+            rating:4.5
+        }
+
+        let products=[
+        {
+            title:"Bag",
+            price:100,
+            description:"This is a bag",
+            image:"",
+            category:"Bag",
+        },
+        {
+            title:"Bag 1",
+            price:120,
+            description:"This is a bag",
+            image:"",
+            category:"Bag",
+        },{
+            title:"Bag 3",
+            price:200,
+            description:"This is a bag",
+            image:"",
+            category:"Bag",
+        },
+
+        ]
+        let p=JSON.stringify(products);
+        console.log(p);
+
+        let p2=JSON.parse(p);
+        console.log(p2);
+        
+
+
+    </script>
+</body>
+</html>
